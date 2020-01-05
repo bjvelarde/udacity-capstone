@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "blog-update",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "content": {
+            "type": "string"
+        },
+        "datePublished": {
+            "type":"string"
+        },
+        "published": {
+            "type":"boolean"
+        }
+    },
+    "required": [
+        "name",
+        "content",
+        "datePublished",
+        "published"
+    ],
+    "additionalProperties": false
+}

@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "blog",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "content": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "name",
+        "content"
+    ],
+    "additionalProperties": false
+}

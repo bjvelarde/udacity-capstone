@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "d0700d24-79ec-487e-8403-b565bef7f8e0",
+		"name": "Udacity Capstone Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "BLOGs",
+			"item": [
+				{
+					"name": "Get all blogs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/blogs",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create blog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Water flowers\",\n\t\"dueDate\": \"2019-06-11\"\n}"
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/blogs",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update blog",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Change the world\",\n\t\"dueDate\": \"2019-12-11\",\n\t\"done\": true\n}"
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/blogs/6543ca99-91c6-44ca-8faa-4712188c1cda",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"blogs",
+								"6543ca99-91c6-44ca-8faa-4712188c1cda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete blog",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/blogs/6543ca99-91c6-44ca-8faa-4712188c1cda",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"blogs",
+								"6543ca99-91c6-44ca-8faa-4712188c1cda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get attachment URL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/blogs/6543ca99-91c6-44ca-8faa-4712188c1cda/attachment",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"blogs",
+								"6543ca99-91c6-44ca-8faa-4712188c1cda",
+								"attachment"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ce2b42d4-8cc5-4f30-a6ed-e7f0f303c3fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "efb16c49-3866-4241-97d1-360ad72736d8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2e83c0fe-6650-44d5-a90f-4c27ff720d83",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "977c227e-2df3-42eb-9a48-ec25e2f7eeae",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "bf208e6b-f66d-4008-9366-dd541ff65425",
+			"key": "apiId",
+			"value": "xuma5vv98e",
+			"type": "string"
+		},
+		{
+			"id": "9bc6399a-d2bb-4f2d-9ffa-8480370d383c",
+			"key": "authToken",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IlFUWkJNVGsxT0VZNE1FTkRPVVEyUVVZNFJqQTRRalpETWpnelFqa3dNekpGUWtKRk5VVXpNUSJ9.eyJpc3MiOiJodHRwczovL2Rldi1yczVuYWx4eC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMjg2NjYwMTg0MDcxNzcxMzIiLCJhdWQiOiJ1NkJZM0ZQRDJnZmZnRTVHcG5zd3h3eVAyNmptenNKOSIsImlhdCI6MTU3NzY2NDMyOCwiZXhwIjoxNTc3NzAwMzI4LCJhdF9oYXNoIjoiR0VnN0REYmJjaGFkalVzVHh2LXFVUSIsIm5vbmNlIjoiVTN-Q0E0cVhqVHZFYU55U3JaS242Y194YUJaZk5HSlMifQ.MTWGftRpKyrTnJQDcLtGrLdWDvHqnfNhFD7m9AnTaV9a_kZVLmrmi5L-f6yTj0ghvp1tSQr1B2-1Zy6mHo-kcSf9VPsOl92nukyGrVGSVbkX_9xDt2v7pr_D3c3xwTexljdMuH6yoSG8ddvyV7iVJVhVIk4kOX6s5y4jHvc-7lH2wM6FHNBgZiIGL1BwdMb5wk63YVjMXIbKbnKErxWRFGZ_AhzUh1VSzReuQ9rJDxH4wD7N7zHc5i5hxDpxafOY0Ge8Sa326Qy_BGORwMpH51sIzgTChHEsyhD76MnjMcRxOMzfOkAlQj4KuL0Mf9e6VFEL0v16wk5omE6guyXRtw",
+			"type": "string"
+		}
+	]
+}
