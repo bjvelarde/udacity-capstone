@@ -1,6 +1,3 @@
-
-This project is hosted at: [Github](https://github.com/bjvelarde/udacity-capstone)
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
